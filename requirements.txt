@@ -1,0 +1,6 @@
+transformers==4.34.0
+kiwipiepy==0.16.1
+numpy==1.23.5
+tensorflow==2.10.0
+prettytable==3.9.0
+pandas==2.0.3
