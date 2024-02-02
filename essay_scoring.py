@@ -108,14 +108,14 @@ if __name__ == '__main__':
     f.close()
 
     while True:
-        Input = int(input('글 예시를 가져올 것인지, 직접 글을 작성할지 선택해주세요. (0 or 1 or 2): '))
+        Input = int(input('(0 or 1 or 2): '))
         if Input == 0:
             dataset = pd.read_csv('./data/dataset.csv',encoding='utf-8-sig')
             test_ids = pd.read_csv('./data/testset.csv',encoding='cp949')
             test_ids_list = test_ids['ID'].to_list()
             dataset = dataset.iloc[test_ids_list]
 
-            essay_idx = int(input('가져오고 싶은 글의 id를 입력해주세요(0~{0}): '.format(len(dataset))))
+            essay_idx = int(input('INPUT ID(0~{0}): '.format(len(dataset))))
             contents = dataset['ESSAY_CONTENT'].iloc[essay_idx].replace('<span>', '').replace(
                 '</span>', '').replace('\n', '').replace('\t', '').replace('#@문장구분#','')
             subject = dataset['ESSAY_SUBJECT'].iloc[essay_idx]
