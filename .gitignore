@@ -10,6 +10,13 @@ venv/
 *.pt
 *.pth
 *.h5
+*.keras
+*.ckpt
 
 outputs/
 results/
+checkpoints/
+data/
+*.csv
+*.xlsx
+*.npy
